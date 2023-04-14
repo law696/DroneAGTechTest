@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DroneAGTechTest</string>
+    <string name="add_polygon">Add Polygon</string>
+    <string name="retrieve_polygons">Retrieve Polygons from DB</string>
+</resources>

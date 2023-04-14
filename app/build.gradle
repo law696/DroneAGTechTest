@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.droneagtechtest'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.droneagtechtest"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def room_version = "2.5.1"
+
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //gson
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    //google maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
+    implementation 'com.google.android.gms:play-services-base:18.2.0'
+    implementation 'com.google.android.gms:play-services-basement:18.2.0'
+    implementation 'com.google.android.gms:play-services-tasks:18.0.2'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:2.2.0'
+
+    //room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+
+    //location
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    //ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation("androidx.room:room-testing:$room_version")
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    testImplementation 'org.mockito:mockito-core:4.2.0'
+    androidTestImplementation 'org.mockito:mockito-android:4.0.0'
+
+    androidTestImplementation 'androidx.arch.core:core-testing:2.2.0'
+}
