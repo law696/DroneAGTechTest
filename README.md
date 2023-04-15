@@ -35,4 +35,11 @@ representations and LatLng objects.
 * The MapApplication class is a custom Android Application class that initializes the 
 PolygonDatabase instance when the application is created. 
 
-* Unit Test
+# Unit Tests
+
+* PolygonUtilsTest
+
+# Instrumentation Tests
+
+* MainRepositoryTest
+
