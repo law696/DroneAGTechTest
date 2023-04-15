@@ -1,6 +1,6 @@
 # DroneAGTechTest
 
-# DroneAG Technical Test Brief Documentation
+# DroneAG Technical Test Documentation
 
 * Language: Kotlin.
 
@@ -34,3 +34,5 @@ representations and LatLng objects.
 
 * The MapApplication class is a custom Android Application class that initializes the 
 PolygonDatabase instance when the application is created. 
+
+* Unit Test
